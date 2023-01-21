@@ -33,12 +33,12 @@ import cmake
 
 
 WORKING_PATH = os.getcwd()
-
+dir_path = os.path.dirname(os.path.realpath(__file__))
 class Build_Target_Optimizer( build_py ):
     """Build TargetOptimizer-Backend API"""
     def run( self ):
         print( 'Building Target_Optimizer-Backend using cmake:' )
-        os.chdir( 'VocalTractLab/src/targetoptimizer-backend' )
+        os.chdir(dir_path+'/VocalTractLab/src/targetoptimizer-backend' )
         #with TemporaryDirectory() as tmpdir:
         #    os.chdir(tmpdir)
         subprocess.check_call( [ 'cmake', '.' ] )
@@ -63,7 +63,7 @@ class Build_VTL( build_py ):
     """Build VocalTractLab-Backend API"""
     def run( self ):
         print( 'Building VocalTractLab-Backend using cmake:' )
-        os.chdir( 'VocalTractLab/src/vocaltractlab-backend' )
+        os.chdir( dir_path+'/VocalTractLab/src/vocaltractlab-backend' )
         #with TemporaryDirectory() as tmpdir:
         #    os.chdir(tmpdir)
         #subprocess.check_call( [ 'cmake', '.' ] )
@@ -152,7 +152,7 @@ if 'all' in sys.warnoptions:
     log.level = logging.DEBUG
 
 # Get version from the VocalTractLab module
-with open('VocalTractLab/__init__.py') as f:
+with open(dir_path+'/VocalTractLab/__init__.py') as f:
     for line in f:
         if line.find('__version__') >= 0:
             version = line.split('=')[1].strip()
