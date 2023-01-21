@@ -199,7 +199,7 @@ else:
             #      #runtime_library_dirs=[ './', './VocalTractLab/', './VocalTractLab/VocalTractLabApi' ],
             #      ),
             Extension( 'VocalTractLab.VocalTractLabApi',
-                  [ './VocalTractLab/VocalTractLabApi.pyx' ],
+                  [ dir_path+'/VocalTractLab/VocalTractLabApi.pyx' ],
                   language="c",
                   libraries=[ 'VocalTractLabApi' ]+libraries,
                   library_dirs=[ './VocalTractLab/src/vocaltractlab-backend' ]+library_dirs,# './VocalTractLab/', './VocalTractLab/VocalTractLabApi' ],
