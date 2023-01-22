@@ -253,7 +253,7 @@ cmdclass = dict( #build_target_optimizer = Build_Target_Optimizer,
 
 setup_args = dict(
     name='VocalTractLab',
-    version=version,
+    version='0.4.0',
     description='Articulatory (text-to-) speech synthesis for Python',
     long_description= DOCLINES,
     url='https://github.com/paul-krug/VocalTractLab',
