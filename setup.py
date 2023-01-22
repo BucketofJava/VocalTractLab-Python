@@ -38,7 +38,7 @@ class Build_Target_Optimizer( build_py ):
     """Build TargetOptimizer-Backend API"""
     def run( self ):
         print( 'Building Target_Optimizer-Backend using cmake:' )
-        os.chdir('/VocalTractLab/src/targetoptimizer-backend' )
+        os.chdir('./VocalTractLab/src/targetoptimizer-backend' )
         #with TemporaryDirectory() as tmpdir:
         #    os.chdir(tmpdir)
         subprocess.check_call( [ 'cmake', '.' ] )
@@ -63,7 +63,7 @@ class Build_VTL( build_py ):
     """Build VocalTractLab-Backend API"""
     def run( self ):
         print( 'Building VocalTractLab-Backend using cmake:' )
-        os.chdir('/VocalTractLab/src/vocaltractlab-backend' )
+        os.chdir('./VocalTractLab/src/vocaltractlab-backend' )
         #with TemporaryDirectory() as tmpdir:
         #    os.chdir(tmpdir)
         #subprocess.check_call( [ 'cmake', '.' ] )
