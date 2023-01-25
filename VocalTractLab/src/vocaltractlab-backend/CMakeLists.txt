@@ -5,6 +5,7 @@ cmake_minimum_required (VERSION 3.8)
 find_package(CUDAToolkit REQUIRED)
 set(CMAKE_CUDA_COMPILER /usr/local/cuda/bin/nvcc)
 set(ENV{CC} "/usr/local/cuda/bin/nvcc")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error=format-security")
 project ("VocalTractLabApi")
 
 add_definitions(-D_USE_MATH_DEFINES -D_CRT_SECURE_NO_WARNINGS)
