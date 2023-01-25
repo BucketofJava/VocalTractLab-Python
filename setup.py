@@ -104,6 +104,7 @@ library_dirs = []
 libraries = []
 
 CC = os.environ.get("CC", None)
+print(CC)
 # NVCPP_EXE = CC if CC is not None and CC.endswith("nvc++") else None
 NVCPP_EXE = CC if CC is not None else None
 if NVCPP_EXE is not None:
