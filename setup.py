@@ -104,8 +104,8 @@ library_dirs = []
 libraries = []
 
 CC = os.environ.get("CC", None)
-NVCPP_EXE = CC if CC is not None and CC.endswith("nvc++") else None
-    
+# NVCPP_EXE = CC if CC is not None and CC.endswith("nvc++") else None
+NVCPP_EXE = CC if CC is not None else None
 if NVCPP_EXE is not None:
     NVCPP_HOME = os.path.dirname(os.path.dirname(NVCPP_EXE))
     include_dirs += [
