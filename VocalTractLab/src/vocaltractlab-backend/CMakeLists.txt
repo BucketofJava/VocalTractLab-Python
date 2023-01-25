@@ -17,4 +17,4 @@ add_library (VocalTractLabApi SHARED VocalTractLabApi.def AnatomyParams.cpp Anat
 target_compile_options(VocalTractLabApi PRIVATE -Wno-unused-result -Wsign-compare -std=c++17)
 set_target_properties(VocalTractLabApi PROPERTIES PREFIX "" LINK_FLAGS "-Xlinker -rpath @loader_path/")
 set_target_properties(VocalTractLabApi PROPERTIES
-    LINK_FLAGS "-rpath $ORIGIN/src/vocaltractlab-backend")
+    LINK_FLAGS "-Xlinker -rpath @loader_path/")
