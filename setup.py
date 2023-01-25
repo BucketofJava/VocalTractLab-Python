@@ -128,7 +128,7 @@ class custom_build_ext(build_ext):
             # otherwise get passed on to nvc++, i.e.,
             # distutils.sysconfig.get_var("CFLAGS"). nvc++
             # does not support all of those "default" flags
-            compile_args = "-Xcompiler -std=*** -std=c++17"
+            compile_args = "-Xcompiler -std=c++17"
             link_args = "-shared"
             self.compiler.set_executable(
                 "compiler_so",
