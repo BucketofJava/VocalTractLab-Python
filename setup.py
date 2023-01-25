@@ -120,6 +120,8 @@ if NVCPP_EXE is not None:
 # noinspection PyPep8Naming
 class custom_build_ext(build_ext):
     def run(self):
+        print("ABC")
+        print(NVCPP_EXE)
         self.run_command('build_py')
         build_ext.run(self);
     def build_extensions(self):
