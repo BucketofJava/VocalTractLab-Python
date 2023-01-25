@@ -205,7 +205,7 @@ else:
                   library_dirs=[ './VocalTractLab/src/vocaltractlab-backend' ]+library_dirs,# './VocalTractLab/', './VocalTractLab/VocalTractLabApi' ],
                   include_dirs=[ np.get_include(), './VocalTractLab/src/vocaltractlab-backend' ]+include_dirs,# './', './VocalTractLab/', './VocalTractLab/VocalTractLabApi' ],
                   runtime_library_dirs=runtime_library_dirs+library_dirs,
-                  extra_compile_args=["-std=c++17", "-Xcompiler"] #'./', './VocalTractLab/', './VocalTractLab/VocalTractLabApi' ],
+                  extra_compile_args=["-std=c++17"] #'./', './VocalTractLab/', './VocalTractLab/VocalTractLabApi' ],
                   )
         ]
     )
